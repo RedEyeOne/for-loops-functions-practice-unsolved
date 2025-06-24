@@ -7,7 +7,23 @@
 
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
-
+  var part1 = [];
+  var part2 = [];
+  for (let name of array) {
+    let hit = false
+    for (let letter of name) {
+      if ((letter === "A" || letter === "a") && hit === false) {
+        hit = true;
+      }
+    }
+    if (hit === true) {
+      part1.push(name);
+    }
+    else {
+      part2.push(name);
+    }
+  }
+  return [part1, part2];
 }
 
 

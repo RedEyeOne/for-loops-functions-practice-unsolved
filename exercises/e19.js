@@ -6,7 +6,15 @@
 
 export function reverseArray(array) {
   // Your code goes here...
-
+  var answer = [];
+  var length = 0;
+  while (array[length] !== undefined) {
+    length++;
+  }
+  for (var i = length - 1; i >= 0; i--) {
+    answer.push(array[i]);
+  }
+  return answer;
 }
 
 

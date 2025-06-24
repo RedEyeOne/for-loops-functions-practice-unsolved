@@ -5,8 +5,18 @@
 // getAllWithdrawals(bankAccounts) => [3432, 0, 43242.34, 0, 23432]
 
 export function getAllWithdrawals(array) {
-  // Your code goes here...
 
+  // Your code goes here...
+  var answer = [];
+  for (var acc of array) {
+    console.log(acc);
+    let sum = 0;
+  for (let action of acc.withdrawals || []) {
+      sum += action;
+    }
+    answer.push(sum);
+  }
+  return answer;
 }
 
 // === TEST YOURSELF ===

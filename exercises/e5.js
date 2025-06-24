@@ -6,7 +6,13 @@
 
 export function getAllClientNames(array) {
   // Your code goes here...
-
+  const names = [];
+  for (const data of array) {
+    if (typeof data.name === 'string') {
+      names.push(data.name);
+    }
+  }
+  return names;
 }
 
 
